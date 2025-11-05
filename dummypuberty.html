@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Plans</title>
+    <link rel="icon" href="white.png" type="image/x-icon">
+    <link rel="stylesheet" href="Event  plans.css">
+</head>
+<body>
+        <!--pre loader               -->
+        <div id="preloader">
+
+        </div> 
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="white.png" alt="logo">
+                <h3>Event Vibe...✨</h3>
+            </div>
+            <ul>
+                <li class="nav-item"><a href="home.php">Home</a></li>
+                <li class="nav-item" id="home-item">Events</li>
+                <li class="nav-item"><a href="login.php">Login</a></li>
+                <li class="nav-item">Book a Hall</li>
+                <li class="nav-item"><a href="contact us.php">Contact us</a></li>
+               
+            </ul>
+            
+        </nav>
+    </header>
+
+
+
+    <main>
+       
+        <div class="container">
+    <h1>Our Puberty Ceremony Plans</h1>
+
+  
+
+       
+
+            <div class="category-box" id="basic" >
+                
+                <img src="basic.png" alt="">
+                <h2>Basic Plan</h2>
+               
+                <p>
+                    LKR 325,000 – 355,000
+                </p>
+                <button class="view-details"><a href="register.php">View Details</a></button>
+
+
+            </div>
+            <div class="category-box" id="standard">
+                <img src="standard.png" alt="">
+                <h2>Standard Plan</h2>
+               
+                <p>
+                    LKR 1,150,000 – 1,185,000
+                </p>
+
+                <button class="view-details"><a href="register.php">View Details</a></button>
+            </div>
+
+            <div class="category-box" id="premium">
+                <img src="premium.png" alt="">
+                <h2>Premuim Plan</h2>
+               
+                       <p>
+                    LKR 4,050,000 – 4,150,000
+                </p>
+                <button class="view-details"><a href="register.php">View Details</a></button>
+            </div>
+
+   
+        </div>
+    </main>
+
+
+    <footer>
+        <p>&copy; 2024 All rights reserved by <b>Event Vibes</b>, Designed by <a href="https://bijon2002.github.io/portfolio/">Bijon Solutions...</a></p>
+    </footer>
+
+        <!--script for preloader        -->
+        <script>
+            var loader = document.getElementById("preloader");
+    
+            window.addEventListener('load', function(load) {
+                window.removeEventListener('load', load, false);               
+                setTimeout(function(){loader.style.display = 'none'},2000);
+              
+              },false);
+        </script>
+    
+</body>
+</html>

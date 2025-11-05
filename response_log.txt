@@ -1,0 +1,19 @@
+{
+    "error": {
+        "message": "The model `text-davinci-003` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations",
+        "type": "invalid_request_error",
+        "param": null,
+        "code": "model_not_found"
+    }
+}
+OpenAI Error: Incorrect API key provided: sk-proj-********************************************************************************************************************************************************vdwA. You can find your API key at https://platform.openai.com/account/api-keys.
+Full API Response: {
+    "error": {
+        "message": "The model `text-davinci-003` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations",
+        "type": "invalid_request_error",
+        "param": null,
+        "code": "model_not_found"
+    }
+}
+
+OpenAI Error: The model `text-davinci-003` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations

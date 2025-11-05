@@ -1,0 +1,256 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*-------------------------------------------------------*/
+/* header part */
+.logo{
+    display: flex;
+    align-items: center;
+    color: white;
+   font-size: 24px;
+   margin-right: 20px;
+}
+.logo img{
+    display: flex;
+    height: 55px;
+    width: 66px;
+    margin-right: 1px;
+}
+.logo h3{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    
+}
+
+
+header ul{
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   
+    
+}
+header ul li{
+    margin: 0 10px;
+}
+header ul a{
+    text-decoration: none;
+    color: white;
+   
+}
+header ul li:hover{
+    color: yellow;
+    cursor: pointer;
+    text-decoration: underline;
+}
+#home-item {
+    color: yellow;
+}
+#home-item:hover{
+    cursor: context-menu;
+    text-decoration: none;
+}
+header{
+    
+    padding: 10px 20px;
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    z-index: 1000;
+}
+
+
+/*main -------------------------------------------------*/
+body{
+    background: url('trad.jpg') no-repeat center center fixed;
+    background-size: cover;
+   /* backdrop-filter: blur(4px); */
+    color: white;
+
+}
+main{
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+.container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    flex-direction: row;
+    gap: 20px;
+    padding: 20px;
+    padding-top: 160px;
+    
+}
+
+
+
+.category-box{
+    background-color: rgb(39, 39, 39);
+    border-radius: 10px;
+    width: 250px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+    color: white;
+    transition: transform 0.3s;
+   
+   
+}
+
+.category-box img {
+    width: 420px; 
+    height: 150px;
+    border-radius: 5px;
+    object-fit: cover; 
+    z-index: 5000;
+    position: relative;
+    overflow:visible;
+    padding-bottom: 140px;
+    
+}
+
+
+.category-box h2 {
+    margin-top: 10px;
+    font-size: 18px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #ffaa00;
+}
+
+.category-box p {
+    font-size: 14px;
+    margin: 10px 0;
+    color: #ddd;
+}
+
+.view-details {
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+
+.category-box:hover{
+    transform: scale(1.18);
+    cursor: pointer;
+}
+
+
+#basic h2{
+    color: palegreen;
+}
+#standard h2{
+    color: paleturquoise;
+}
+#premium h2{
+    color: palegoldenrod;
+}
+
+#basic button{
+    background-color: palegreen;
+}
+#standard button{
+    background-color: paleturquoise;
+}
+#premium button{
+    background-color: palegoldenrod;
+}
+
+#basic,#premium, #standard {
+    background-color: maroon;
+    color: white;
+}
+#basic button:hover{
+    background-color: #e6d817;
+}
+#standard button:hover{
+    background-color: #e6d817;
+}
+#premium button:hover{
+    background-color: #e6d817;
+}
+
+.container h1{
+    padding-bottom: 80px;
+   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #e6d817;
+}
+.container h5{
+    position: absolute;
+    padding-right: 900px;
+    padding-bottom: 15px;
+    font-family:'Times New Roman', Times, serif;
+    
+}
+
+.category-box a{
+    text-decoration: none;
+    color: maroon;
+}
+/* preloader--------------------------------*/
+#preloader
+{
+    background:rgb(0, 0, 0) url(preloader3.gif) no-repeat center center ;
+    background-size: 12%;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 10000;
+}
+
+
+/* footer part*--------------------------------------------*/
+footer
+{
+    background-color: rgb(218, 197, 83);
+    color: maroon;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   
+}
+footer p{
+    padding-top: 10px;
+}
+
+footer a{
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-decoration: none;
+    
+}
+footer a:hover
+{
+    text-decoration: underline;
+    color:red ;
+    
+}

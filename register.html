@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="register.css">
+    <link rel="icon" href="white.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="white.png" alt="logo">
+                <h3>Event Vibe...✨</h3>
+            </div>
+            <ul>
+                <li class="nav-item"><a href="home.php">Home</a></li>
+                <li class="nav-item"><a href="event_list.php">Events</a></li>
+                <li class="nav-item"><a href="login.php">Login</a></li>
+                <li class="nav-item"><a href="Event plans.php">Plans</a></li>
+                <li class="nav-item"><a href="contact us.php">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <form action="register.php" method="POST">
+                <center><h2>Register</h2></center>
+
+                <label for="first-name">First Name
+                    <input type="text" id="first-name" name="first-name" placeholder="Enter your First Name" required>
+                </label>
+
+                <label for="last-name">Last Name
+                    <input type="text" id="last-name" name="last-name" placeholder="Enter your Last Name" required>
+                </label>
+
+                <label for="email">Email
+                    <input type="email" id="email" name="email" required placeholder="Enter your Email">
+                </label>
+
+                <label for="NIC">NIC
+                    <input type="text" id="NIC" name="NIC" required placeholder="Enter your NIC">
+                </label>
+
+                <label for="password">Create Password
+                    <input type="password" id="password" name="password" required placeholder="Create password">
+                </label>
+
+                <label for="Cpassword">Confirm Password
+                    <input type="password" id="Cpassword" required placeholder="Confirm password">
+                </label>
+
+                <label for="show-password">
+                    <input type="checkbox" id="show-password"> Show Password
+                </label>
+                <br><br>
+                <hr>
+                <br>
+
+                <center><h2>Card Details</h2></center>
+                <img src="cards.jpg" alt="cards" height="50px" width="400px">
+                <br><br>
+
+                <label for="card-name">Name on card
+                    <input type="text" id="card-name" name="card-name" placeholder="Enter Name on card" required>
+                </label>
+
+                <label for="card-number">Card Number
+                    <input type="text" id="card-number" name="card-number" placeholder="Card number" required>
+                </label>
+
+                <label for="expiry-date">Expiry Date
+                    <input type="text" id="expiry-date" name="expiry-date" placeholder="MM / YY" required>
+                </label>
+
+                <label for="CVV">CVV
+                    <input type="number" id="CVV" name="CVV" placeholder="CVV (4 digits)" required>
+                </label>
+
+                <br><br>
+                <label for="terms">
+                    <input type="checkbox" id="terms" required> Agree to all terms and conditions
+                </label>
+                <br><br>
+                <p>Already have an account? <a href="login.php">Sign in</a></p>
+                <br>
+                <input type="submit" value="Register">
+            </form>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 All rights reserved by <b>Event Vibes</b>, Designed by <a href="https://bijon2002.github.io/portfolio/">Bijon Solutions...</a></p>
+    </footer>
+
+    <script>
+        // Password validation and error handling
+        document.querySelector("form").addEventListener("submit", function (e) {
+            let password = document.getElementById("password").value;
+            let confirmPassword = document.getElementById("Cpassword").value;
+            let nic = document.getElementById("NIC").value;
+            let cardNumber = document.getElementById("card-number").value;
+            let cvvNumber = document.getElementById("CVV").value;
+
+            if (password.length < 8) {
+                alert("Weak password. Please use at least 8 characters.");
+                e.preventDefault();
+            }
+
+            if (password !== confirmPassword) {
+                alert("Passwords do not match.");
+                e.preventDefault();
+            }
+
+            if (nic.length !== 12 || isNaN(nic)) {
+                alert("Invalid NIC. It must be exactly 12 digits.");
+                e.preventDefault();
+            }
+
+            if (cardNumber.length !== 16 || isNaN(cardNumber)) {
+                alert("Invalid card number. It must be exactly 16 digits.");
+                e.preventDefault();
+            }
+
+            if (cvvNumber.length !== 4 || isNaN(cvvNumber)) {
+                alert("Invalid CVV. It must be exactly 4 digits.");
+                e.preventDefault();
+            }
+        });
+
+        // Toggle password visibility
+        document.getElementById("show-password").addEventListener("change", function () {
+            let passwordField = document.getElementById("password");
+            let confirmPasswordField = document.getElementById("Cpassword");
+
+            if (this.checked) {
+                passwordField.type = "text";
+                confirmPasswordField.type = "text";
+            } else {
+                passwordField.type = "password";
+                confirmPasswordField.type = "password";
+            }
+        });
+    </script>
+</body>
+</html>
